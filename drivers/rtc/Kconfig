@@ -44,5 +44,12 @@ config RTC_DRV_JZ4740
 	help
 	  If you say yes here you get support for the Ingenic JZ4740 SoC RTC
 	  controller.
+	  
+config RTC_DRV_RTCMV
+	tristate "Marvell Integrated RTC"
+	depends on ARCH_KIRKWOOD
+	help
+	  If you say yes here you get support for the Marvell Integrated RTC
+	  controller.
 
 endif # RTC_CLASS

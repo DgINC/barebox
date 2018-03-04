@@ -77,6 +77,14 @@ image-$(CONFIG_MACH_SOLIDRUN_CUBOX) += barebox-solidrun-cubox.img
 image-$(CONFIG_MACH_SOLIDRUN_CUBOX) += barebox-solidrun-cubox-2nd.img
 
 # ----------------------- Kirkwood based boards ---------------------------
+DLINK_DNS325_KWBOPTS = ${KWBOPTS} -i $(board)/dlink-dns325/kwbimage.cfg
+OPTS_start_dlink_dns325.pblx.kwbimg = $(DLINK_DNS325_KWBOPTS)
+FILE_dlink-dns325.img	= start_dlink_dns325.pblx.kwbimg
+FILE_dlink-dns325-2nd.img = start_dlink_dns325.pblx
+pblx-$(CONFIG_MACH_DLINK_DNS325) += start_dlink_dns325
+image-$(CONFIG_MACH_DLINK_DNS325) += dlink-dns325.img
+image-$(CONFIG_MACH_DLINK_DNS325) += dlink-dns325-2nd.img
+
 GLOBALSCALE_GURUPLUG_KWBOPTS = ${KWBOPTS} -i $(board)/globalscale-guruplug/kwbimage.cfg
 OPTS_start_globalscale_guruplug.pblx.kwbimg = $(GLOBALSCALE_GURUPLUG_KWBOPTS)
 FILE_barebox-globalscale-guruplug.img	= start_globalscale_guruplug.pblx.kwbimg
