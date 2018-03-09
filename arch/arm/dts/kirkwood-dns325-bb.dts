@@ -1,0 +1,13 @@
+/*
+ * Barebox specific DT overlay for D-Link DNS-325
+ */
+
+#include "arm/kirkwood-dns325.dts"
+
+/ {
+	gpio-leds {
+		white-power {
+			barebox,default-trigger = "heartbeat";
+		};
+	};
+};
