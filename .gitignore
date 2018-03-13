@@ -79,3 +79,4 @@ GTAGS
 
 # Kconfig presets
 all.config
+/Ex ARM GCC Debug/
